@@ -35,6 +35,17 @@
         <version>1.9.4</version>
     </dependency>
   </dependencies>
+<distributionManagement>
+<repository>
+<id>nexus</id>
+<name>My Nexus Repository</name>
+<url>http://192.168.0.117:8081/repository/test-release/</url>
+</repository>
+    <snapshotRepository>
+    <id>nexus</id>
+    <url>http://192.168.0.117:8081/repository/test-snapshot</url>
+    </snapshotRepository>
+</distributionManagement>
   <build>
     <plugins>
       <plugin>
@@ -88,17 +99,6 @@
               </execution>
           </executions>
       </plugin>
-<distributionManagement>
-<repository>
-<id>nexus</id>
-<name>My Nexus Repository</name>
-<url>http://192.168.0.117:8081/repository/test-release/</url>
-</repository>
-    <snapshotRepository>
-    <id>nexus</id>
-    <url>http://192.168.0.117:8081/repository/test-snapshot</url>
-    </snapshotRepository>
-</distributionManagement>
       <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
